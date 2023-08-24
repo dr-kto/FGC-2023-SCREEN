@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLL SCREEN</title>
+    <link rel="stylesheet" href="./style/video.css">
+    <link rel="stylesheet" href="./style/animations.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <img id="gum-local" class="backpic" src="./media/maxresdefault.jpg" alt="">
+    <video id="gum-local" class="camera" autoplay="" playsinline="" muted=""></video>
+
+    <video src="./media/geneva.mp4" class="gen dNone" id="gum-local"  playsinline=""></video>
+    <video src="./media/kazakhstan.mp4" id="gum-local" class="kaz dNone" autoplay="" playsinline="" muted=""></video>
+    <video src="./media/uzbekistan.mp4" id="gum-local" class="uzb dNone" autoplay="" playsinline="" muted=""></video>
+        <div class=""></div>
+        <div class="container ">
+            <div class="main">
+                <div class="tred">
+                    <div class="teams">
+                        <div class="srTeam1">Team1</div>
+                        <div class="srTeam2">Team2</div>
+                        <div class="srTeam3">Team3</div>
+                    </div>
+                    <div class="info1">Match  </div>
+                    
+                    </div>
+                <div class="empty">
+                    <div class="teams"></div>
+                    <div class="info"> </div>
+                </div>
+                <div class="tblue">
+                    <div class="teams">
+                        <div class="sbTeam1">Team3</div>
+                        <div class="sbTeam2">Team4</div>
+                        <div class="sbTeam3">Team5</div>
+                    </div>
+                    <div class="info2">
+                        <span style="font-style:italic;">First </span> Global Challenge
+                    </div>
+                </div>
+                
+                <div class="mid">
+                    
+
+                    <div class="logo">
+                        <img src="./media/logo.png" alt="">
+                    </div>
+                    <div class="timer">
+                        <!-- <img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);width: 100%;" src="https://cdnl.iconscout.com/lottie/premium/thumb/air-horn-7928877-6275009.mp4?f=webp"> -->
+                    </div>
+                    <div class="score ">
+                        <div class="sleft"></div>
+                        <div class="sright"></div>
+                    </div>
+                </div>
+            </div>
+            
+           
+        </div>
+        <div class="popup invisible">
+            <div class="resultInfo">Results   <span>MATCH: 1</span></div>
+            <div class="resultRed" >
+                <div class="red win invisible">
+                    <img src="./media/globe.png" alt="">
+                    <span>WIN</span>
+                </div>
+                <img src="./media/RED_figure.png" alt="" >
+                <div class="teamNames">
+                    <div class="rTeam1">DDDDDDDDD</div>
+                    <div class="rTeam2">EEEEEEEEEE</div>
+                    <div class="rTeam3">Qanagattandyrushylar</div>
+                </div>
+                <div class="scoreTable">
+                    <div class="red hPoints">HYDROGEN POINTS <span>18</span></div>
+                    <div class="red oPoints">OXYGEN POINTS <span>18</span></div>
+                    <div class="red cmPoints">CONVERSION MULTIPLIER <span>18</span></div>
+                    <div class="red rPoints">ROBOT'S PROFICIENCY <span>18</span></div>
+                    <div class="red cbPoints">COOPERTITION BONUS <span>18</span></div>
+                    <div class="red pPoints" style="color: #fc3939;">PENALTY <span>0 </span></div>
+                </div>
+                <div class="rTeamScore">TOTAL: <span>667</span></div>
+
+                
+            </div>
+            
+            <div class="resultBlue">
+                <div class="blue win invisible">
+                    <img src="./media/globe.png"  alt="">
+                    <span>WIN</span>
+                </div>
+                <img src="./media/BLUE_figure.png" alt="" >
+                <div class="teamNames">
+                    <div class="bTeam1">AAAAAAA</div>
+                    <div class="bTeam2">BBBBBBBB</div>
+                    <div class="bTeam3">CCCCCCCCCC</div>
+                </div>
+                <div class="scoreTable bTable">
+                    <div class="blue hPoints">HYDROGEN POINTS <span>18</span></div>
+                    <div class="blue oPoints">OXYGEN POINTS <span>18</span></div>
+                    <div class="blue cmPoints">CONVERSION MULTIPLIER <span>18</span></div>
+                    <div class="blue rPoints">ROBOT'S PROFICIENCY <span>18</span></div>
+                    <div class="blue cbPoints">COOPERTITION BONUS <span>18</span></div>
+                    <div class="blue pPoints" style="color: #fc3939;">PENALTY <span>0</span></div>
+                </div>
+                <div class="bTeamScore">TOTAL: <span>667</span></div>
+                
+            </div>
+            
+        </div>
+
+        <div class="qr dNone">
+            <a href="https://dr-kto.github.io/FLL-SDU-RANKING-2023/" target="_blank"><img src="./media/qr.png" width="164" height="164" border="0" title="QR код"></a>
+        </div>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script src="./js/video.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-player/2.0.2/lottie-player.js" integrity="sha512-NcJNVDzfhHalE0Dj3s8ub4hW0QYw1hfk05I53N3MTXOYDDGt0wpXmAPve+GhmmdDxik8pTUONQjeNKDO/p7rhQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- <script src="./js/script.js"></script> -->
+        
+</body>
+</html>

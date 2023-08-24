@@ -1,0 +1,162 @@
+* {
+    /* transition: all 1s cubic-bezier(.175,.885,.32,1.275); */
+}
+
+.mid::before,
+.mid::after
+{
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: -50%;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+    transform-origin: bottom left;
+}
+
+/* .mid::before
+{
+    transform: rotate(75deg) scaleX(1);
+    background-image: url(/media/flag.png);
+}
+.mid::after
+{
+    transform: rotate(-75deg) scaleX(-1) ;
+    background-image: url(/media/flag.png);
+} */
+
+
+
+
+
+
+
+
+.resultRed .scoreTable
+{   
+    margin-top: calc(var(--scale) * var(--red) * 1vw);
+    font-size: calc(var(--scale) * var(--red) * 1.5vw);
+}
+.resultRed .scoreTable div 
+{
+    padding-left: calc(var(--scale) * var(--red) * 3vw);
+    height: calc(var(--scale) * var(--red) * 3.5vw);
+    border-bottom: #6b6b6b solid calc(var(--scale) * var(--red) * 2px);
+}
+.resultRed .scoreTable div span
+{
+    min-width: calc(var(--scale) * var(--red) * 4vw);
+    border-left: #797979 solid calc(var(--scale) * var(--red) * 2px);
+}
+.resultRed .scoreTable div:before
+{
+    width: calc(var(--scale) * var(--red) * 2vw);
+    left: calc(var(--scale) * var(--red) * 1.5vw);
+}
+.rTeamScore
+{
+    letter-spacing: calc(var(--scale) * var(--red) * 1px);
+    padding:  calc(var(--scale) * var(--red) * 2vw) calc(var(--scale) * var(--red) * 2vw) calc(var(--scale) * var(--red) * 2vw) calc(var(--scale) * var(--red) * 1vw);
+    font-size: calc(var(--scale) * var(--red) * 1.3vw);
+}
+.resultRed .teamNames div
+{
+    border-bottom:#00000075 solid calc(var(--scale) * var(--red) * 1px);
+    margin: calc(var(--scale) * var(--red) * 2vw);
+    font-size: calc(var(--scale) * var(--red) * 2vw);
+    letter-spacing: calc(var(--scale) * var(--red) * 1px);
+}
+.resultRed .resultInfo
+{
+    font-size: calc(var(--scale) * var(--red) * 5vw);
+}
+.resultRed .resultInfo span
+{
+    padding: calc(var(--scale) * var(--red) * 1vw);
+    font-size: calc(var(--scale) * var(--red) * 2vw);
+    border-radius: calc(var(--scale) * var(--red) * 2px);
+}
+.resultRed
+{
+    width: calc(var(--scale) * var(--red) * 40%);
+    padding-bottom: calc(var(--scale) * var(--red) * 1vw);
+} 
+.red .win img 
+{
+    left: calc(var(--scale) * var(--red) * 20%);
+    top: calc(var(--scale) * var(--red) * -5%);
+    width: calc(var(--scale) * var(--red) * 4.5vw);
+    height: calc(var(--scale) * var(--red) * 4.5vw);
+}
+.red .win span
+{
+    padding: calc(var(--scale) * var(--red) * 1vw) calc(var(--scale) * var(--red) * 3vw);
+    font-size: calc(var(--scale) * var(--red) * 2.5vw);
+    border-radius: calc(var(--scale) * var(--red) * 2vw) calc(var(--scale) * 2vw) 0 0;
+}
+
+/* Blue */
+.resultBlue .scoreTable
+{   
+    margin-top: calc(var(--scale) * var(--blue) * 1vw);
+    font-size: calc(var(--scale) * var(--blue) * 1.5vw);
+}
+.resultBlue .scoreTable div 
+{
+    padding-left: calc(var(--scale) * var(--blue) * 3vw);
+    height: calc(var(--scale) * var(--blue) * 3.5vw);
+    border-bottom: #6b6b6b solid calc(var(--scale) * var(--blue) * 2px);
+}
+.resultBlue .scoreTable div span
+{
+    min-width: calc(var(--scale) * var(--blue) * 4vw);
+    border-left: #797979 solid calc(var(--scale) * var(--blue) * 2px);
+}
+.resultBlue .scoreTable div:before
+{
+    width: calc(var(--scale) * var(--blue) * 2vw);
+    left: calc(var(--scale) * var(--blue) * 1.5vw);
+}
+.bTeamScore
+{
+    letter-spacing: calc(var(--scale) * var(--blue) * 1px);
+    padding:  calc(var(--scale) * var(--blue) * 2vw) calc(var(--scale) * var(--blue) * 2vw) calc(var(--scale) * var(--blue) * 2vw) calc(var(--scale) * var(--blue) * 1vw);
+    font-size: calc(var(--scale) * var(--blue) * 1.3vw);
+}
+.resultBlue .teamNames div
+{
+    border-bottom:#00000075 solid calc(var(--scale) * var(--blue) * 1px);
+    margin: calc(var(--scale) * var(--blue) * 2vw);
+    font-size: calc(var(--scale) * var(--blue) * 2vw);
+    letter-spacing: calc(var(--scale) * var(--blue) * 1px);
+}
+.resultBlue .resultInfo
+{
+    font-size: calc(var(--scale) * var(--blue) * 5vw);
+}
+.resultBlue .resultInfo span
+{
+    padding: calc(var(--scale) * var(--blue) * 1vw);
+    font-size: calc(var(--scale) * var(--blue) * 2vw);
+    border-radius: calc(var(--scale) * var(--blue) * 2px);
+}
+.resultBlue
+{
+    width: calc(var(--scale) * var(--blue) * 40%);
+    padding-bottom: calc(var(--scale) * var(--blue) * 1vw);
+} 
+.blue .win img 
+{
+    left: calc(var(--scale) * var(--blue) * 20%);
+    top: calc(var(--scale) * var(--blue) * -5%);
+    width: calc(var(--scale) * var(--blue) * 4.5vw);
+    height: calc(var(--scale) * var(--blue) * 4.5vw);
+}
+.blue .win span
+{
+    padding: calc(var(--scale) * var(--blue) * 1vw) calc(var(--scale) * var(--red) * 3vw);
+    font-size: calc(var(--scale) * var(--blue) * 2.5vw);
+    border-radius: calc(var(--scale) * var(--blue) * 2vw) calc(var(--scale) * 2vw) 0 0;
+}

@@ -1,0 +1,579 @@
+:root{
+--bblue: #5573fa;
+--rred :#fc3939;
+--yellow: rgb(246, 246, 137);
+--oorange: rgb(250, 194, 88);
+--scale: 0.65;
+--red: 1;
+--blue: 1;
+}
+*
+{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+    [data-aos=flip-left]
+    {
+        transform: perspective(2500px) rotateY(-90deg);
+    }
+    [data-aos=flip-right]
+    {
+        transform: perspective(2500px) rotateY(-50deg);
+    }
+
+    .invisible
+    {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .transition
+    {
+        transition: all 0.5 ease;
+    }
+
+    .popup
+    {
+        background-color: #00000041;
+        height: 100%;
+        width: 70%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        color: #fff;
+        align-items: center;
+        padding-top: 6%;
+    }
+
+    .scoreTable
+    {   
+        
+        margin-top: calc(var(--scale) * 1vw);
+        color: #000000;
+        font-size: calc(var(--scale) * 1.5vw);
+        width: 93%;
+        font-weight: bold;
+    }
+    .scoreTable div 
+    {
+        padding-left: calc(var(--scale) * 3vw);
+        height: calc(var(--scale) * 3.5vw);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: #6b6b6b solid calc(var(--scale) * 2px);
+    }
+    
+    .scoreTable div:nth-child(odd)
+    {
+        background-color: white;
+    }
+    .scoreTable div:nth-child(2n)
+    {
+        background-color: rgb(201, 201, 201);
+    }
+    .scoreTable div span
+    {
+        min-width: calc(var(--scale) * 4vw);
+        height: 100%;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        border-left: #797979 solid calc(var(--scale) * 2px);
+    }
+    .scoreTable div:before
+    {
+        content: "";
+        height: inherit;
+        width: calc(var(--scale) * 2vw);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        left: calc(var(--scale) * 1.5vw);
+        position: absolute;
+        z-index: 3;
+    }
+    .hPoints:before
+    {
+        background-image: url(/media/hydrogen.png);
+    }
+    .oPoints:before
+    {
+        background-image: url(/media/oxygen.png);
+    }
+    .cmPoints:before
+    {
+        background-image: url(/media/red-cross.png);
+    }
+    .rPoints:before
+    {
+        background-image: url(/media/robot.png);
+    }
+    .cbPoints:before
+    {
+        background-image: url(/media/handshake.png);
+    }
+    .pPoints:before
+    {
+        background-image: url(/media/forbidden.png);
+    }
+
+    .rTeamScore,
+    .bTeamScore
+    {
+        font-weight: bold;
+        letter-spacing: calc(var(--scale) * 1px);
+        position: absolute;
+        z-index: -1;
+        bottom: -13%;
+        right: 0%;
+        width: 50%;
+        padding:  calc(var(--scale) * 2vw) calc(var(--scale) * 2vw) calc(var(--scale) * 2vw) calc(var(--scale) * 1vw);
+        display: flex;
+        justify-content: space-between;
+        font-size: calc(var(--scale) * 1.3vw);
+    }
+    .rTeamScore
+    {
+        background-color: var(--rred);
+    }
+
+    .bTeamScore
+    {
+        background-color: var(--bblue);
+    }
+
+    .teamNames
+    {
+        width: 100%;
+    }
+    .teamNames div
+    {
+        text-align: center;
+        border-bottom:#00000075 solid calc(var(--scale) * 1px);
+        margin: calc(var(--scale) * 0.7vw);
+        font-size: calc(var(--scale) * 2vw);
+        font-weight: bold;
+        letter-spacing: calc(var(--scale) * 1px);
+        /* font-family: var(--font); */
+    }
+
+    .teams
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .teams div
+    {
+        inline-size: 8vmax;
+        box-sizing: border-box;
+        margin: auto;
+        word-wrap: break-word;
+        font-size: 1.2vw;
+        text-align: center;
+        color: rgb(243, 243, 243);
+        border-radius: 0.5vw;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 2;
+        display: block;
+        white-space: nowrap;
+    }
+
+
+
+    .resultInfo
+    {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        z-index: 0;
+        height: 20%;
+        width: 62%;
+        top:0;
+        font-size: calc(var(--scale) * 5vw);
+        text-transform: uppercase;
+    }
+    .resultInfo span
+    {
+        background-color: #fff;
+        color: #000000;
+        padding: calc(var(--scale) * 1vw);
+        font-size: calc(var(--scale) * 2vw);
+        border-radius: calc(var(--scale) * 2px);
+    }
+
+
+    
+
+    .resultBlue,
+    .resultRed
+    {
+        /* font-family: sans-serif; */
+        font-weight: bold;
+        display: flex;
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: center; 
+        position: relative;
+        z-index: 3;
+        width: calc(var(--scale) * 40%);
+        padding-bottom: calc(var(--scale) * 1vw);
+    } 
+
+    .resultBlue img,
+    .resultRed img {
+        position: absolute;
+        z-index: -1;
+        object-fit: cover;
+        width: 100%;
+        margin-top: -10%;
+    }
+
+    .resultBlue
+    {
+        background-color: var(--bblue);
+    }
+    .resultRed
+    {
+        background-color: var(--rred);
+    }
+    
+    .win
+    {
+        
+    }
+    .win img,
+    .win span
+    {
+        position: absolute;
+        right: 10%;
+        top: -12%;
+        z-index: -1;
+        
+    }
+    .win img {
+        z-index: 1;
+        left: calc(var(--scale) * 20%);
+        top: calc(var(--scale) * -5%);
+        width: calc(var(--scale) * 4.5vw);
+        height: calc(var(--scale) * 4.5vw);
+        object-fit: contain;
+        rotate: 30deg;
+    }
+    .win span
+    {
+        padding: calc(var(--scale) * 1vw) calc(var(--scale) * 3vw);
+        background-color: white;
+        color: #000000;
+        font-size: calc(var(--scale) * 2.5vw);
+        border-radius: calc(var(--scale) * 2vw) calc(var(--scale) * 2vw) 0 0;
+    }
+    
+    .score
+    {
+        min-height: 3vw;
+        min-width: 100%;
+        display: flex; 
+        justify-content: space-between;
+    }
+    .score div 
+    {
+        min-height: 2.5vw;
+        padding-top: 0.5vw;
+        text-align: center;
+        background-color: var(--oorange);
+    }
+    .sright
+    {
+        margin-left: 0.7vw;
+    }
+
+
+    body {
+
+        background-color: #33334d;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 95vh;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    .main,.parallel
+     {
+        display: flex;
+        width: 50%;
+        height: 10vw;
+        /* width: 100%;
+        height: 10vw;
+        background-color: aliceblue; 
+        display: flex;
+        position: absolute;
+        bottom: 0%; */
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        flex:1;
+        bottom: 0;
+        position: absolute;
+        width: 100vw;
+    }
+    .mid {
+        position: absolute;
+        top: -67%;
+        transform: translateX(136%);
+        width: 12%;
+        height: 150%;
+        background-color: #000000;
+        /* overflow: hidden; */
+        color: #ffffff;
+        z-index: 2;
+    }
+    .tblue
+    {
+        position: relative;
+        overflow: hidden;
+        border-radius: 2vw 2vw 0 0 ;
+        background-color: #1a73f8;
+        width: 40%;
+        height: 100%;
+    
+    }
+    .empty
+    {
+        position: relative;
+        overflow: hidden;
+        border-radius: 2vw 2vw 0 0 ;
+        background-color: #1a73f8;
+        width: 22%;
+        height: 100%; 
+    }
+    .tred
+    {
+        position: relative;
+        overflow: hidden;
+        border-radius: 2vw 2vw 0 0 ;
+        background-color: #ec1818;
+        width: 40%;
+        height: 100%;
+    
+    
+    }
+    
+    .mid,
+    .teams {
+        border-radius: 2vw 2vw 0 0;
+        border: .7vw solid #000000;
+        z-index: 9;
+    }
+    .mid {
+        border-radius: 4vw 4vw 0 0;
+        /* overflow: hidden; */
+    }
+    
+    .mid>div:not(:nth-child(3)) {
+        display: flex;
+        flex-direction: column;
+        height: 42%;
+        align-items: center;
+        justify-content: center;
+        font-size: 2vw;
+    }
+    .timer {
+        text-align: center;
+        background-color: var(--oorange);
+    
+    }
+    .score {
+        display: flex;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+    
+    }
+    
+    .sleft {
+        text-align: center;
+        margin-top: .8vw;
+
+        width: 47%;
+        height: 100% !important;
+    }
+    .sright {
+        text-align: center;
+        margin-top: .8vw;
+        background-color:#ffffff;
+        width: 47%;
+        height: 100% !important;
+    }
+    .teams {
+        height: 67%;
+        display: flex;
+        align-items: center;
+        /* font-family: sans-serif; */
+        font-weight: bold;
+        overflow: hidden;
+    }
+    .info,
+    .info1, 
+    .info2 {
+        background-color: rgb(246, 246, 137);
+        max-width: 100%;
+        max-height: 25%;
+        /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+        font-size: 1vw;
+        font-weight: bolder;
+        padding: .3vw 1vw 1vw 2vw;
+        text-transform: uppercase;
+        color: #4d4d4d;
+    
+    }
+    .info2  {
+        text-align: end;
+    }
+    #gum-local {
+        position: absolute;
+        bottom: -10%;
+        top: 0;
+        right: 0;
+        left: 0;
+        /* op: -2vw; */
+        /* right: auto; */
+        /* width: 177vmin; */
+        
+    }
+    .logo img {
+        object-fit: contain;
+        max-width: 90%;
+    }
+    .logo {
+        background-color: rgb(0, 0, 0);
+        margin-bottom: .7vw;
+        border-radius: 3vw 3vw 0 0;
+        overflow: hidden;
+    }
+    .timer {
+        font-size: 4vw;
+        /* font-family: sans-serif; */
+    }
+    .score {
+        font-size: 2vw;
+        color: aliceblue;
+        /* font-family: sans-serif; */
+    }
+    /* @keyframes score {
+        0% {
+            height: 50%;
+        }
+        100% {
+            height: 30%
+        }
+    } */
+    .score_anima {
+        height: 30% !important;
+        transition:  1s ease;
+    }
+    /* @keyframes teams {
+        0% {
+            margin
+        }
+    } */
+    .score_rest {
+        
+    }
+    .dNone {
+        display: none;
+    }
+    .qr {
+        position: absolute;
+        right: 5%;
+        top: 5%;
+        width: 10vw;
+    
+        padding: 0.5vw;
+        border-radius: 3vw;
+        /* background-color: #ffffff; */
+        overflow: hidden;
+    }
+    .qr img {
+        background-color: white;
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+        /* padding: 1vw; */
+    
+    }
+    .tbody{
+        overflow: hidden;
+    }
+    .teams::after
+    {
+
+        
+    }
+    .mask {
+        background-color: blue;
+        background-clip: text;
+        color: transparent;
+      -webkit-background-clip: text;
+    }
+    .background {
+        
+        flex-direction: column;
+        position: absolute;
+        z-index: 1;
+    }
+    .n1, .n2 {
+        display: flex;
+        align-items: center;
+        /* transform:  translate(0 ,-14vw); */
+        animation: slideUP 7s linear infinite;
+        /* flex-wrap: nowrap; */
+        z-index: 2;
+    }
+    .n1 img,
+    .n2 img {
+        margin: 0.1vw 0.5vw;
+    }
+    .teams {
+        position: relative;
+        z-index: 9;
+    }
+    
+    .info,.info1, .info2 {
+        position: relative;
+        z-index: 99;
+    }
+    .n2{
+        animation: slideDOWN 7s linear infinite ;
+    }
+
+    .background>div>img {
+        width: 1.7vw;
+        height: auto;
+    }
+    @keyframes slideUP {
+        0% {transform:  translateX(-15vw);}
+        100% {transform:  translateX(1vw);}
+    }
+    @keyframes slideDOWN {
+        0% {transform:  translateX(1vw);}
+        100% {transform:  translateX(-15vw);}
+    }
+    .tred .teams .background {
+        transform: translate(0, -3vw) rotate(-18deg);
+    }
+    .tblue .teams .background {
+        transform: translate(0, -4vw) rotate(-18deg);
+    }
+    .backpic {
+        /* display: none; */
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
