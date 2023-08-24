@@ -370,7 +370,7 @@ const yourFunction = async () => {
         else{
             console.log("kj")
             div(':root').style.setProperty('--red',1)
-            div(':root').style.setProperty('--blue',rate*index)
+            div(':root').style.setProperty('--blue',1+rate*index)
         }
     }
     
