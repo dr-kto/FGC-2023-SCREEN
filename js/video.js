@@ -112,10 +112,19 @@ async function getData() {
         if(scoreRed > scoreBlue)
         {
             removeClass('.red.win','invisible')
+            div('.blue.win',0).innerHTML = "WIN"
             addClass('.blue.win','invisible')
+        }
+        if(scoreRed = scoreBlue)
+        {
+            addClass('.blue.win','invisible')
+            addClass('.red.win','invisible')
+            div('.red.win',0).innerHTML = "DRAW"
+            div('.blue.win',0).innerHTML = "DRAW"
         }
         else
         {
+            div('.red.win',0).innerHTML = "WIN"
             addClass('.red.win','invisible')
             removeClass('.blue.win','invisible')
         }
