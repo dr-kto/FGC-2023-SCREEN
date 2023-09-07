@@ -115,12 +115,12 @@ async function getData() {
             div('.blue.win',0).innerHTML = "WIN"
             addClass('.blue.win','invisible')
         }
-        if(scoreRed = scoreBlue)
+        if(scoreRed == scoreBlue)
         {
-            addClass('.blue.win','invisible')
-            addClass('.red.win','invisible')
-            div('.red.win',0).innerHTML = "DRAW"
-            div('.blue.win',0).innerHTML = "DRAW"
+            removeClass('.blue.win','invisible')
+            removeClass('.red.win','invisible')
+            div('.red span',0).innerHTML = "DRAW"
+            div('.blue span',0).innerHTML = "DRAW"
         }
         else
         {
@@ -376,6 +376,12 @@ const yourFunction = async () => {
             
             div(':root').style.setProperty('--red',1+rate*index)
             div(':root').style.setProperty('--blue',1)
+        }
+        else if(scoreRed == scoreBlue)
+        {
+            console.log(scoreBlue+scoreRed)
+            div(':root').style.setProperty('--blue',1)
+            div(':root').style.setProperty('--red',1)
         }
         else{
             console.log("kj")
