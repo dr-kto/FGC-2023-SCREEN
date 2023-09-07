@@ -115,7 +115,7 @@ async function getData() {
             div('.blue span',0).innerHTML = "WIN"
             addClass('.blue.win','invisible')
         }
-        if(scoreRed == scoreBlue)
+        else if(scoreRed == scoreBlue)
         {
             removeClass('.blue.win','invisible')
             removeClass('.red.win','invisible')
